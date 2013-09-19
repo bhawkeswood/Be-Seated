@@ -6,20 +6,12 @@
 <div id="new_restaurant"><%= link_to "New Restaurant", new_restaurant_path %></div>
 
 
-<div><ul>
-	<li>name: Fusia Dog </li>
-	<li>Price_range: $9.00 </li>
-	<li>Adress: 10 Duncan st.</li>
-	<li><a href="http://www.fusiadog.com/menu">Mmmmmenu!</a> </li><ul></div>
-
-<div>
-	<ul>
-		<li><%= @restaurants.each do |restaurant| %></li>
-		<li><%= restaurant.name %></li>
-		<li><%= restaurant.address %></li>
-		<li><%= restaurant.menu_url %></li>
-		<li><%= restaurant.price_range %></li>
+<%= @restaurants.each do |restaurant| %>
+		<div class="item_index">
+			<div><%= restaurant.name %></div>
+			<div><%= restaurant.address %></div>
+			<div><%= restaurant.menu_url %></div>
+			<div><%= restaurant.price_range %></div>
+		</div>
 		<% end %>
-	</ul>
-</div>
 	<div><p> BE SEATED</p></div>

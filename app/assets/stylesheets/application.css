@@ -12,4 +12,12 @@
  *= require_tree .
  */
 
- div {background-color: red}
+ div {
+ 	background-color: red;
+ 	border: 1px solid black;
+ }
+
+ .item_index {
+ 	background: white;
+ 	display: inline-block;
+ }
