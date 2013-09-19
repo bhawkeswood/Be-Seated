@@ -5,12 +5,11 @@
 
 <div id="new_restaurant"><%= link_to "New Restaurant", new_restaurant_path %></div>
 
-
-<%= @restaurants.each do |restaurant| %>
+<% @restaurants.each do |restaurant| %>
 		<div class="item_index">
-			<div><%= restaurant.name %></div>
+			<div><%= link_to restaurant.name, restaurant %></div>
 			<div><%= restaurant.address %></div>
-			<div><%= restaurant.menu_url %></div>
+			<div><%= link_to "Menu", restaurant.menu_url %></div>
 			<div><%= restaurant.price_range %></div>
 		</div>
 		<% end %>
