@@ -7,6 +7,7 @@ Beseated::Application.routes.draw do
   # get "restaurants/delete"
 
   resources :restaurants
+  resources :users, :only => [:new, :create]
 
   root 'restaurants#index'
   # The priority is based upon order of creation: first created -> highest priority.

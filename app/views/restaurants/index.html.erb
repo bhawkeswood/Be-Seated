@@ -10,7 +10,7 @@
 			<div><%= link_to restaurant.name, restaurant %></div>
 			<div><%= restaurant.address %></div>
 			<div><%= link_to "Menu", restaurant.menu_url %></div>
-			<div><%= restaurant.price_range %></div>
+			<div>$<%= restaurant.price_range %> - $<%= restaurant.price_range + 10 %></div>
 		</div>
 		<% end %>
 	<div><p> BE SEATED</p></div>
