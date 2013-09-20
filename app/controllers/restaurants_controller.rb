@@ -1,5 +1,4 @@
 class RestaurantsController < ApplicationController
-  #hey this is just to test the shit out of this stuff
   
   def index 
     @restaurants = Restaurant.all
