@@ -1,0 +1,11 @@
+<div class="field">
+	<%= f.label :categories %>
+	<%= select_tag "restaurant[category_ids][]", options_for_select(@categorires.
+	collect{|c| [c.name, c.id]}), {multiple: :true, size: 10} %>
+</div>
+
+
+# if you were to pass categories to restaurant
+# eg. restaurant.categories 
+# you will receive the categories associated with the restaurant in an array
+# this is visible next to line 3 with the empty array.

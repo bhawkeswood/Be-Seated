@@ -1,9 +1,16 @@
 Beseated::Application.routes.draw do
-  get "sessions/new"
-  get "sessions/create"
-  get "sessions/destroy"
-  get "users/new"
-  get "users/create"
+  # get "reservations/index"
+  # get "reservations/new"
+  # get "reservations/show"
+  # get "reservations/create"
+  # get "reservations/edit"
+  # get "reservations/update"
+  # get "reservations/destroy"
+  # get "sessions/new"
+  # get "sessions/create"
+  # get "sessions/destroy"
+  # get "users/new"
+  # get "users/create"
   # get "restaurants/index"
   # get "restaurants/show"
   # get "restaurants/new"
@@ -12,6 +19,7 @@ Beseated::Application.routes.draw do
   # get "restaurants/delete"
 
   resources :restaurants
+  resources :reservations
   resources :users, :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
 
