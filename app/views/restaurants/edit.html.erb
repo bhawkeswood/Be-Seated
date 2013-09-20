@@ -1,2 +1,26 @@
-<h1>Restaurants#edit</h1>
-<p>Find me in app/views/restaurants/edit.html.erb</p>
+<div class="top"><h1>Edit <%= @restaurant.name %></h1></div>
+
+
+<%= form_for @restaurant do |f| %>
+	<p>
+		<%= f.label "name" %><br>
+		<%= f.text_field "name" %>
+	</p>
+	<p>
+		<%= f.label "address" %><br>
+		<%= f.text_field "address" %>
+	</p>
+	<p>
+		<%= f.label "price_range" %><br>
+		<%= f.number_field "price_range" %>
+	</p>
+	<p>
+		<%= f.label "menu_url" %><br>
+		<%= f.text_field "menu_url" %>
+	</p>
+	<p>
+		<%= f.submit  %>
+	</p>
+<% end %>
+
+<div class="footer"><%= link_to "Back", @restaurant %></div>

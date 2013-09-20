@@ -21,5 +21,6 @@
 <div class="footer">
 	<div class="foot_link"><%= link_to "Back", restaurants_path %></div>
 	<div class="foot_link"><%= link_to "Edit", edit_restaurant_path %></div>
-	<!-- <div class="foot_link"><%= link_to "Delete", restaurant %></div> -->
+	<div class="foot_link"><%= link_to "Delete", @restaurant,
+	 method: :delete, data: { confirm: "Are you sure?" } %></div>
 </div>
