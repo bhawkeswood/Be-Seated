@@ -15,9 +15,26 @@
  div {
  	background-color: red;
  	border: 1px solid black;
+ 	margin: 3px;
  }
 
  .item_index {
- 	background: white;
+ 	background: black;
  	display: inline-block;
+ 	padding: 5px;
  }
+
+.top {
+	text-align: right;
+	padding: 20px;
+}
+
+.footer {
+	clear: both;
+}
+
+#left_tab{
+	width: 150px;
+	height: 500px;
+	float: left;
+}

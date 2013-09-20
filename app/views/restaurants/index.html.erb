@@ -1,9 +1,9 @@
 
-<div><h1> RESTAURANT </h1></div>
+<div class="top"><h1> RESTAURANTS </h1></div>
 
 
 
-<div id="new_restaurant"><%= link_to "New Restaurant", new_restaurant_path %></div>
+<div id="left_tab"><%= link_to "New Restaurant", new_restaurant_path %></div>
 
 <% @restaurants.each do |restaurant| %>
 		<div class="item_index">
@@ -13,4 +13,4 @@
 			<div>$<%= restaurant.price_range %> - $<%= restaurant.price_range + 10 %></div>
 		</div>
 		<% end %>
-	<div><p> BE SEATED</p></div>
+	<div class="footer"><p> BE SEATED</p></div>
