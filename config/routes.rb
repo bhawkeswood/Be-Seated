@@ -1,4 +1,6 @@
 Beseated::Application.routes.draw do
+  get "users/new"
+  get "users/create"
   # get "restaurants/index"
   # get "restaurants/show"
   # get "restaurants/new"
