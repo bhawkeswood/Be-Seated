@@ -1,6 +1,6 @@
 <div class="field">
 	<%= f.label :categories %>
-	<%= select_tag "restaurant[category_ids][]", options_for_select(@categorires.
+	<%= select_tag "restaurant[category_ids][]", options_for_select(@categories.
 	collect{|c| [c.name, c.id]}), {multiple: :true, size: 10} %>
 </div>
 
