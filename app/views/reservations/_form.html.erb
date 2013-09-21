@@ -3,6 +3,9 @@
 <%= form_for ([@restaurant, @reservation]) do |f| %>
 	<%= f.label :res_time %>
 	<%= f.datetime_select :res_time %>
+<!-- 
+	FIXED THIS, Added code above this line and removed code below this line -->
+
 	<%#= f.select :res_time, @restaurant.timeslots.collect { |slot| [slot.strftime("%A, %b %d, %l:%M %p"), slot]} %>
 
 	<%= f.submit %>
