@@ -13,10 +13,12 @@
  */
 
  div {
- 	background-color: pink;
+ 	background-color: #66FFFF;
  	border: 1px solid black;
  	margin: 3px;
+
  }
+ h1 {text-align: center;}
 
  .item_index {
  	background: black;
