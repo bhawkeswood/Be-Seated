@@ -2,7 +2,8 @@
 
 <%= form_for ([@restaurant, @reservation]) do |f| %>
 	<%= f.label :res_time %>
-	<%= f.datetime_select :res_time %>
+
+	<%= f.datetime_select :res_time, :start_year => Time.zone.now.year, :end_year => Time.zone.now.year + 2, :use_short_month => true, ampm: true, minute_step: 60, start_hour: 8, end_hour: 21 %>
 <!-- 
 	FIXED THIS, Added code above this line and removed code below this line -->
 

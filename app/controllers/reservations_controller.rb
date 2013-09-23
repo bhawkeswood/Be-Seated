@@ -4,7 +4,8 @@ class ReservationsController < ApplicationController
   end
 
   def new
-    @reservation = Reservation.new
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @reservation = @restaurant.reservations.build
   end
 
   def show
@@ -12,8 +13,9 @@ class ReservationsController < ApplicationController
   end
 
 
-  def create 
-    @reservation = @restaurant..reservation.build(reservation_params)
+  def create
+    @restaurant = Restaurant.find(params[:restaurant_id]) 
+    @reservation = @restaurant.reservations.build(reservation_params)
     @reservation.user_id = current_user.id 
 
     if @reservation.save
@@ -39,9 +41,9 @@ class ReservationsController < ApplicationController
     @reservation.destroy
   end
 
-
+  private
   def reservation_params
-    params.require(:reservation).period(:user_id, :restaurant_id, :time)
+    params.require(:reservation).permit(:user_id, :restaurant_id, :res_time)
  
-end
+  end
 end

@@ -18,8 +18,10 @@ Beseated::Application.routes.draw do
   # get "restaurants/update"
   # get "restaurants/delete"
 
-  resources :restaurants
-  resources :reservations
+  resources :restaurants do
+    resources :reservations
+  end
+  
   resources :users, :only => [:new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
 
