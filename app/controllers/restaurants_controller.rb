@@ -6,6 +6,11 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    # @reservation = @restaurant.reservation.build 
+
+    # below code is same as above
+    # @reservation = reservation.new(:restaurant_id => @restaurant.id)
+
   end
 
   def new

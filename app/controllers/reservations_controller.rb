@@ -14,16 +14,23 @@ class ReservationsController < ApplicationController
 
 
   def create
+       
     @restaurant = Restaurant.find(params[:restaurant_id]) 
     @reservation = @restaurant.reservations.build(reservation_params)
     @reservation.user_id = current_user.id 
 
     if @reservation.save
-      redirect_to restaurant_path(@reservation.restaurant_id)
+      flash[:notice] = "Your reservation at #{@reservation.restaurant.name} is confirmed"
+     redirect_to 
+    
     else
+      flash[:notice] =  "Sorry you we are unable to accomodate you at that time, please try again!"
       render :new, :alert => "Sorry, the restaurant you selected is not open during this period"
+      redirect_to restaurant_path(params[:restaurant_id])    
     end
-  end
+end
+
+
 
   # def create
   #   @reservation = Reservation.new(params[:id])
